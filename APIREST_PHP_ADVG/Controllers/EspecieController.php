@@ -22,6 +22,10 @@ class EspecieController {
                 $data = json_decode(file_get_contents("php://input"), true);
                 echo json_encode($this->especie->update($id, $data));
                 break;
+            case 'PATCH':
+                $data = json_decode(file_get_contents("php://input"), true);
+                echo json_encode($this->especie->update($id, $data));
+                break;
             case 'DELETE':
                 echo json_encode($this->especie->delete($id));
                 break;

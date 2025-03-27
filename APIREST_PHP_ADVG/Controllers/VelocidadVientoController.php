@@ -22,6 +22,11 @@ class VelocidadVientoController {
                 $data = json_decode(file_get_contents('php://input'), true);
                 echo json_encode($this->model->update($id, $data));
                 break;
+            case 'PATCH':
+                $data = json_decode(file_get_contents('php://input'), true);
+                echo json_encode($this->model->update($id, $data));
+                break;
+            
             case 'DELETE':
                 echo json_encode($this->model->delete($id));
                 break;
